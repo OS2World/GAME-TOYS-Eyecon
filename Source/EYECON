@@ -1,0 +1,19 @@
+# Makefile for the eyecon program
+
+initdll.obj : eyecon initdll.asm
+    masm initdll;
+
+eyehook.obj : eyecon eyehook.c
+    cl -c -ASw -G2rs -Ox -W3 eyehook.c
+
+eyecon.dll : eyecon initdll.obj eyehook.obj eyehook.def
+    link /align:16 eyehook+initdll,eyecon.dll,nul,os2,eyehook
+
+eyecon.obj : eyecon.c eyecon
+    cl -c -ASw -G2rs -Ox -W3 eyecon.c
+
+eyecon.exe : eyecon.obj eyecon.def eyecon
+    link /NOE /align:16 eyecon,eyeco,nul,os2,eyecon
+    if exist eyecon.exe del eyecon.exe
+    ren eyeco.exe eyecon.exe
+    rc eyecon

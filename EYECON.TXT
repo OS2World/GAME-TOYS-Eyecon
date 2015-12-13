@@ -1,0 +1,40 @@
+--------------------------------------------------------------------
+Eyecon - A very silly pointer tracking program for OS/2 Presentation Manager
+Version: 1990-Jun-12 
+Author: John Ridges
+License: Released as Public Domain by John Ridges on 2015/11/21
+--------------------------------------------------------------------
+
+By John Ridges
+
+Invocation:  START EYECON
+
+To install, place EYECON.EXE in your path, EYECON.DLL in your libpath.
+
+
+Eyecon is one of those programs that proves that there are programmers out
+there with too much spare time on their hands. Actually, I saw a version of
+this on a Mac and I thought it was so cute that I just had to implement it
+for PM. Only later (honest!) did I learn that the Mac version was a copy of
+someone else's PM version. I've now seen that other PM version and in all
+modesty I think mine's better. (But of course I would, wouldn't I?) You be
+the judge. For those of you that care, I hereby officially release this
+sucker into the public domain.
+
+Eyecon uses a Journal Hook to know when the pointer has moved, and a low
+priority thread to update to eyeballs, so it shouldn't interfere with any
+(gasp) REAL work you might be using your computer for. Eyecon's been pretty
+thoroughly tested and I'm willing to bet what's left of my professional
+reputation that it's bug free. Of course, legally, I make no guarantees about
+anything it might do to your programs, data, hardware, or sanity. Hey, you
+get what you pay for.
+
+Comments? Questions? Suggestions? Hate mail? You can contact me at Gilmore
+/108 or Compuserve 72000,2057 (checked weekly).
+
+
+5/10/90 - Bug that was introduced when I switched to the OS/2 1.2 toolkit.
+Microsoft removed the "_export" declarator from the definition of "CALLBACK"
+in the C header files, so none of my window procedures were exported! This
+caused random, unpredictable weirdness with Presentation Manager. Oh well,
+I guess that just about wraps it up for my professional reputation.

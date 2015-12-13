@@ -1,0 +1,9 @@
+LIBRARY EYECON
+
+PROTMODE
+
+EXPORTS
+
+    InstallEyeHook      @1
+    ReleaseEyeHook      @2
+

@@ -1,0 +1,11 @@
+NAME EYECO WINDOWAPI
+
+DESCRIPTION 'EYECON - A pointer tracking program by John Ridges'
+
+STUB 'os2stub.exe'
+
+STACKSIZE 8192
+
+IMPORTS
+    INSTALLEYEHOOK = EYECON.1
+    RELEASEEYEHOOK = EYECON.2
